@@ -1,0 +1,561 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1{
+    color: white;
+    position: relative;
+    z-index: 20;
+    display: block;
+    font-weight: bolder;
+    font-size: 4em;
+}
+header h1 span{
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    opacity: 0.8;
+}
+
+header .location{
+    top: 4em;
+    position: relative;
+    z-index: 20;
+    color: white;
+    text-decoration: none;
+    transition: color 350ms;
+}
+header .location span{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url(images/location.png);
+    background-size: cover;
+    background-position: center;
+    left: -1.6em;
+    top: -0.3em;
+    transition: background-image 350ms;
+}
+header .location:hover{
+    color: #BC4546;
+}
+header .location:hover span{
+    background-image: url(images/locationRed.png);
+}
+
+@media (min-width: 700px) {
+    header h1{
+        font-size: 5em;
+    }
+    header h1 span{
+        font-size: 2rem;
+    }
+    header .location{
+        font-size: 1.05rem;
+    }
+}
+@media (min-width: 840px) {
+    header h1{
+        font-size: 5.5em;
+    }
+    header h1 span{
+        font-size: 2.5rem;
+    }
+    header .location{
+        font-size: 1.1rem;
+    }
+}
+
+
+header .slide {
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    animation: scale 1s  ease-in;
+    z-index: 2;
+
+}
+
+
+@keyframes scale{
+    0%{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100%{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+header .slide.active {
+    display: flex;
+}
+
+header .slide::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+header .slide.one {
+    background-image: url(images/pepperoni.jpg);
+}
+
+header .slide.two {
+    background-image: url(images/Chicken-Marsala.jpg);
+}
+
+header .slide.three {
+    background-image: url(images/peppers.jpg);
+}
+
+header .slide.four {
+    background-image: url(images/sicilian.jpg);
+}
+
+header .slide.five {
+    background-image: url(images/Vodka.jpg);
+}
+
+/* Controls */
+
+.controls .prev, .controls .next {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6;
+    display: none;
+}
+
+.prev .img, .next .img {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-image: url(images/left.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.next .img {
+    transform: rotate(180deg);
+}
+
+.prev {
+    top: 0;
+    left: 0;
+}
+
+.next {
+    top: 0;
+    right: 0;
+}
+
+@media(min-width: 700px){
+    /* Controls */
+    .controls .prev, .controls .next{
+        display: flex;
+    }
+    
+    .controls .back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    
+    .controls .back:hover{
+        background-color: white;
+        opacity: 0.2;
+        
+    }
+    
+    .prev .img, .next .img {
+        width: 22px;
+        height: 42px;
+    }
+    .prev{
+        left: -200px;
+        transition: all 250ms ease-out;
+    }
+    .next{
+        right: -200px;
+        transition: all 250ms ease-out;
+    }
+
+    header:hover .controls .prev{
+        left: 0px;
+    }
+
+    header:hover .controls .next{
+        right: 0px;
+    }
+
+
+}
+
+
+/* Indicators */
+.indicator{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.indicator div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(190, 189, 189, 0.4);
+    border-radius: 50%;
+    margin: 0 4.5px;
+    border: 2px solid rgba(77, 77, 77, 0.8);
+
+
+}
+.indicator div.active{
+    background-color: rgba(77, 77, 77, 0.5);
+    border: 2px solid rgba(190, 189, 189, 0.4);
+}
+
+
+/* ============== HOURS ===================== */
+
+
+
+#hours{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(175, 160, 147, 0.55);
+}
+h2{
+    color: black;
+    font-size: 47px;
+    padding-top: 1.8em;
+    font-weight: bolder;
+}
+#hours h3{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 2em;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    position: relative;
+    left: -0.7em;
+    
+}
+#hours h3 span{
+    position: relative;
+    width: 50px;
+    height: 34px;
+    background-image: url(images/Delivery.png);
+    background-size: cover;
+    bottom: -.1em;
+    left: 0em;
+    display: inline-block;
+}
+
+#hours .wrapper{
+    margin-top: 5em;
+}
+
+#hours h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    display: block;
+    margin-top: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+#hours h4 span{
+    margin-top: 1.3em;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.8;
+    letter-spacing: 4px;
+}
+
+#hours .dine-in{
+    margin-top: 5.5em;
+    padding-bottom: 10em;
+}
+
+#hours .dine-in h3 span{
+    background-image: url(images/dine\ in.png);
+    background-size: cover;
+    background-position: center;
+    height: 47px;
+    top: 0.3em;
+}
+
+@media(min-width: 700px){
+    h2{
+        font-size: 3.6em;
+        padding-top: 2.5em;
+    }
+
+    #hours h3{
+        font-size: 33px;
+        margin-top: 4em;
+    }
+}
+@media(min-width: 840px){
+
+    #hours .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+    #hours .dine-in{
+        margin-top: 0;
+        position: relative;
+        top: -0.76em;
+    }
+
+
+    #hours h2{
+        font-size: 4em;
+        padding-top: 2.8em;
+    }
+}
+
+/* ==================Phone======================== */
+
+#phone a{
+    position: fixed;
+    bottom: 3em;
+    right: 1.5em;
+    width: 40px;
+    height: 40px;
+    z-index: 1500;
+    border-radius: 50%;
+    background-image: url(images/phone.png);
+    background-size: cover;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media(min-width: 700px){
+    #phone a{
+        right: 2.5em;
+    }
+}
+@media(min-width: 840px){
+    #phone a{
+        right: 3.5em;
+    }
+}
+
+
+/* ======================= Frequently Ordered================ */
+#orders{
+    background-color: rgb(243, 243, 243);
+}
+#orders h2{
+    padding-bottom: 2em;
+}
+#orders .food{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 4em;
+    padding-right: 0.7em;
+    padding-left: 0.7em;
+    max-width: 360px;
+}
+
+#orders .food .photo{
+    max-width: 80px;
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%;
+}
+
+#orders .text{
+    border-right: 0.5px solid rgba(0, 0, 0, 0.274);
+    max-width: 200px;
+}
+
+#orders h3{
+    font-family: Ebrima; 
+    display: block;
+    color: #370C0C;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 0.5em;
+
+}
+#orders h3 span{
+    display: block;
+    font-size: 10.5px;
+    opacity: 0.5;
+    padding-top: 0.3em;
+}
+
+#orders .price{
+    font-family: ink free;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    padding-left: 0.2em;
+    max-width: 100px;
+}
+
+#orders .food .marsala{
+    background-image: url(images/Chicken-Marsala.jpg);
+}
+
+#orders .food .cheese{
+    background-image: url(images/pepperoni.jpg);
+}
+
+#orders .pizza .price p{
+    font-family: Ebrima;
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: left;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
+    min-width: 94.5px;
+
+}
+#orders .pizza .price p .size{
+    font-size: 10.5px;
+    font-weight: 400;
+}
+#orders .pizza .price p .pr{
+    font-family: ink free;
+    padding-left: 0.2em;
+
+}
+
+#orders .pizza .text{
+    max-width: 165px;
+}
+
+
+@media(min-width: 840px){
+    #orders{
+        display: grid;
+        grid-template-columns: 1fr 820px 1fr;
+        position: relative;
+    }
+    #orders h2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-top: 4em;
+        padding-bottom: 4.5em;
+    }
+    #orders .container{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: 410px 410px;
+        position: relative;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding-bottom: 7em;
+    }
+    #orders .container::before{
+      content: '';
+      position: absolute;
+      height: 80%;
+      top: -1.5em;
+      width: 0.08px;
+      opacity: 0.6;
+      background-color: black;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #orders .food{
+        left: auto;
+        transform: none;
+        max-width: none;
+    }
+
+    #orders .pizza{
+        position: relative;
+        right: 0;
+    }
+
+    #orders .two{
+        padding-left: 4em;
+    }
+    #orders .one{
+        padding-right: 4em;
+    }
+    img{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        right: 5%;
+        top: 400px;
+        
+    }
+}
+
+img{
+    display: none;
+}
+@media(min-width: 1300px){
+    img{
+        display: block;
+    }
+}
+

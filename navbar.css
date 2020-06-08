@@ -1,0 +1,217 @@
+#navigation {
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+.nav-scrolled{
+    transition: background-color 400ms ease-in;
+    background-color: rgb(255, 254, 253);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+ .nav-scrolled .nav-list a{
+    color: black;
+} 
+.nav-scrolled .line{
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+nav.active {
+    background-color: #35363A;
+}
+nav.active .nav-list a{
+    color: white;
+    
+}
+nav.active .line{
+    background-color: white;
+}
+
+nav .logo {
+    position: relative;
+    width: 7em;
+    height: 4em;
+    left: 1.5em;
+    background-image: url(images/logo.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+}
+
+nav .nav-list {
+    top: 4em;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #35363A;
+    position: fixed;
+    list-style: none;
+    text-decoration: none;
+    opacity: 0.8;
+    visibility: hidden;
+    transform: translateY(400px);
+    transition: transform 350ms;
+}
+
+nav .nav-list li {
+    margin-bottom: 3em;
+    transform: translateY(800px);
+    transition: transform 1s;
+}
+
+nav .nav-list.active li:nth-child(1) {
+    transform: translateY(0);
+}
+
+nav .nav-list.active li:nth-child(2) {
+    transform: translateY(0);
+    transition-delay: 250ms;
+}
+
+nav .nav-list.active li:nth-child(3) {
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+nav .nav-list.active li:nth-child(4) {
+    transform: translateY(0);
+    transition-delay: 750ms;
+}
+
+nav .nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+    transition: color 350ms;
+}
+
+nav .nav-list li a:hover, nav .nav-list li a:active {
+    color: #BC4546;
+}
+
+nav .nav-list.active {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hamburger */
+
+nav .hamburger {
+    width: 1.6em;
+    height: 1.8rem;
+    position: relative;
+    cursor: pointer;
+    line-height: 5rem;
+    z-index: 1500;
+    right: 1.5em;
+}
+
+nav .line {
+    cursor: pointer;
+    width: 100%;
+    height: 1px;
+    background-color: #C4C4C4;
+    margin-top: 0.5rem;
+    position: relative;
+    display: block;
+    transition: all 650ms;
+}
+
+nav .hamburger.active .line:nth-child(1) {
+    transform: translateY(.45em) rotate(45deg);
+}
+
+nav .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+nav .hamburger.active .line:nth-child(3) {
+    transform: translateY(-.6rem) rotate(-45deg);
+}
+
+@media (min-width: 700px) {
+    nav .logo{
+        left: 3em;
+        font-size: 1.1em;
+    }
+    nav .hamburger{
+        right: 3em;
+    }
+}
+
+@media (min-width: 840px){
+    nav .logo{
+        left: 6.5em;
+        font-size: 1.2em;
+    }
+
+    nav .hamburger{
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+
+    nav .nav-list {
+        top: 1.5em;
+        transform: none;
+        width: 100vw;
+        height: 100%;
+        flex-direction: row;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: transparent;
+        position: relative;
+        right: 4.5em;
+        list-style: none;
+        text-decoration: none;
+        opacity: 0.8;
+        visibility: visible;
+        transition: none;
+        
+    }
+    nav .nav-list li {
+        position: absolute;
+        top: 50%;
+        margin-left: 3em;
+        transform: none;
+        transition: none;
+        position: relative;
+        
+        
+    }
+    nav .nav-list li a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        transition: color 450ms;
+        letter-spacing: 2px;
+        font-weight: 400;
+        top: 50%;
+    }
+    
+}
