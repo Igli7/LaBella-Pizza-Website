@@ -42,7 +42,7 @@ header h1 span{
     opacity: 0.8;
 }
 
-header .location{
+.location{
     top: 4em;
     position: relative;
     z-index: 20;
@@ -50,7 +50,7 @@ header .location{
     text-decoration: none;
     transition: color 350ms;
 }
-header .location span{
+.location span{
     position: absolute;
     width: 25px;
     height: 25px;
@@ -61,10 +61,10 @@ header .location span{
     top: -0.3em;
     transition: background-image 350ms;
 }
-header .location:hover{
+.location:hover{
     color: #BC4546;
 }
-header .location:hover span{
+.location:hover span{
     background-image: url(images/locationRed.png);
 }
 
@@ -541,21 +541,151 @@ h2{
     #orders .one{
         padding-right: 4em;
     }
-    img{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        right: 5%;
-        top: 400px;
-        
-    }
+   
 }
 
-img{
+/* ============= FOOTER =================== */
+footer{
+    background-color: rgba(175, 160, 147, 0.55);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer .info{
+    padding-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+footer .location{
+    top: 0;
+    color: #35363A;
+    font-weight: 900;
+    padding-bottom: 2em;
+    display: inline-block;
+}
+footer .location span {
+    background-image: url(images/location1.png);
+
+}
+footer .phone-number{
+    margin-top: 2em;
+
+}
+
+footer .number{
+    display: block;
+    padding-left: 3em;
+    font-size: 1.4em;
+    margin-bottom: 1.5rem;
+    padding-bottom:0;
+}
+footer .number span{
+    background-image: url(images/phone1.png);
+    left: -1em;
+    top: 0;
+    width: 23px;
+    height: 23px;
+}
+
+footer .number:hover span{
+    background-image: url(images/phone1.png);
+}
+
+footer .social-media{
+    padding-top: 2em;
+}
+
+footer .social-media ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-media ul li{
+    list-style: none;
+    margin: 0 1em;
+    
+}
+
+footer .social-media ul li a{
+    font-size: 2em;
+    color: #35363A;
+
+}
+
+footer .fa{
+    transition: color 400ms;
+}
+
+
+footer .social-media ul li:hover:nth-child(1) .fa{
+    color: #3b5998;
+}
+footer .social-media ul li:hover:nth-child(2) .fa{
+    color: #e4405f;
+}
+footer .social-media ul li:hover:nth-child(3) .fa{
+    color: #00acee;
+}
+footer .social-media ul li:hover:nth-child(4) .fa{
+    color: #d44638 ;
+}
+
+.fa:hover footer .social-media ul li:hover:nth-child(1){
+    color: #3b5998;
+}
+
+
+
+footer .allRight{
+    padding: 3em 0;
+    margin-right: 1em;
+}
+footer h5{
+    font-size: 1rem;
+    font-weight: 900;
+    padding-bottom: 0.5em;
+}
+footer p{
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+footer p a{
+    color: #00ADBA;
+    position: relative;
+    transition: color 400ms;
+}
+footer p a::after{
+    font-family: 'FontAwesome';
+    content: " \f08e";
+    font-size: 0.7em;
+    position: relative;
+    top: -1em;
+    left: 0.3em;
     display: none;
 }
-@media(min-width: 1300px){
-    img{
-        display: block;
-    }
+
+footer p a:hover{
+    cursor: pointer;
+    color:#35363A;
 }
+footer p a:hover + footer p a::after{
+    display: inline-block;
+    font-family: 'FontAwesome';
+    content: " \f08e";
+    font-size: 0.7em;
+    position: relative;
+    top: -1em;
+    left: 0.3em;
+}
+
+
+
 

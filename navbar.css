@@ -99,6 +99,14 @@ nav .nav-list li a {
     font-weight: 900;
     transition: color 350ms;
 }
+nav .external::after{
+    font-family: 'FontAwesome';
+    content: " \f08e";
+    font-size: 0.4em;
+    position: relative;
+    top: -1em;
+    left: 0.3em;
+}
 
 nav .nav-list li a:hover, nav .nav-list li a:active {
     color: #BC4546;
