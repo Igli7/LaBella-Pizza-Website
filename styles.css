@@ -396,7 +396,7 @@ h2{
 
 /* ======================= Frequently Ordered================ */
 #orders{
-    background-color: rgb(243, 243, 243);
+    background-color: #f3f3f3;
 }
 #orders h2{
     padding-bottom: 2em;

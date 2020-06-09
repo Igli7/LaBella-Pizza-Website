@@ -8,14 +8,14 @@
 }
 .nav-scrolled{
     transition: background-color 400ms ease-in;
-    background-color: rgb(255, 254, 253);
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
  .nav-scrolled .nav-list a{
-    color: black;
+    color: white;
 } 
 .nav-scrolled .line{
-    background-color: black;
+    background-color: white;
 }
 
 nav {
@@ -70,7 +70,7 @@ nav .nav-list {
 nav .nav-list li {
     margin-bottom: 3em;
     transform: translateY(800px);
-    transition: transform 1s;
+    transition: transform 450ms;
 }
 
 nav .nav-list.active li:nth-child(1) {
