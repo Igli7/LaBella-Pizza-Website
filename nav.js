@@ -9,6 +9,15 @@ selectElement('.hamburger').addEventListener('click', () => {
     selectElement('.nav-list>li').classList.toggle('active');
 })
 
+//Sidebar
+selectElement('.toggle').addEventListener('click', () => {
+  selectElement('.toggle').classList.toggle('active');
+  selectElement('svg').classList.toggle('active');
+  selectElement('.toggle>span').classList.toggle('active');
+  selectElement('.menu-list').classList.toggle('active');
+  
+})
+
 
 
 // Navigation style on scroll
@@ -34,3 +43,7 @@ const sectionOneObserver = new IntersectionObserver(function(
 sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+
+//SideBar
+

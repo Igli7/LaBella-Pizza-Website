@@ -81,8 +81,8 @@ img{
 img.one{
     grid-column-start: 3;
     grid-column-end: 4;
-    width: 400px;
-    height: 400px;
+    /* width: 400px;
+    height: 400px; */
     position: absolute;
     top: 200px;
     left: 4em;
@@ -91,14 +91,14 @@ img.one{
 img.two{
     grid-column-start: 1;
     grid-column-end: 2;
-    width:400px;
-    height: 300px;
+    /* width:400px;
+    height: 300px; */
     top: 900px;
     display: block;
 }
 img.garlic{
-    top: 1500px;
-    height: 250px;
+    top: 1400px;
+    /* height: 250px; */
     transform: rotate(5deg);
 }
 
@@ -107,6 +107,10 @@ img.garlic{
         display: none;
     }
 }
+
+
+
+
 
 
 

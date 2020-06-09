@@ -1,0 +1,154 @@
+#sidebar{
+    position: fixed;
+    top: 64px;
+    z-index: 900;
+}
+#sidebar .sidebar-wrapper{
+    display: flex;
+}
+#sidebar .menu-list{
+    width: 200px;
+    background-color: #242424;
+    opacity: 0.95;
+    transform: translateX(-200px);
+    transition: transform 250ms ease-out;
+}
+#sidebar .menu-list h3{
+    font-size: 2.5em;
+    color: #BC4546;
+    padding: 1em 0;
+}
+#sidebar .menu-list ul{
+    text-align: left;
+    list-style: none;
+    padding-left: 1.5em;
+}
+#sidebar .menu-list ul li{
+    padding: 1.2em 0;
+}
+#sidebar .menu-list ul:nth-last-child(1){
+    padding-bottom: 4em;
+}
+#sidebar .menu-list ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 250ms ease-in;
+    position: relative;
+}
+#sidebar .menu-list ul li a span{
+    width: 20px;
+    height: 20px;
+    background-image: url(images/appetizer.png);
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 4px;  
+    transition: background-image 250ms ease-in;  
+}
+
+#sidebar .menu-list ul li a::before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: white;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 15px;  
+    transition: width 250ms ease-in-out;
+}
+#sidebar .menu-list ul li a:hover, #sidebar .menu-list ul li a:active{
+    color: #BC4546;
+}
+#sidebar .menu-list ul li a:hover::before{
+    width: 95%;
+}
+#sidebar .menu-list ul li a:hover span{
+    background-image: url(images/appetizerRed.png);
+}
+
+#sidebar .toggle{
+    width: 34px;
+    height: 30px;
+    background-color: #242424; 
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    transform: translateX(-200px);
+    transition: transform 250ms ease-out;
+}
+
+@media(min-width: 700px){
+    #sidebar{
+        top: 70.39px;
+    }
+}
+@media(min-width:840px){
+    #sidebar{
+        top: 76.8px;
+    }
+}
+
+#sidebar .toggle span{
+    margin-left: 5px;
+    width: 15px;
+    height: 1px;
+    background-color: white;
+    display: block;
+    position: relative;
+}
+#sidebar .toggle span::before, #sidebar .toggle span::after{
+    content: '';
+    width: 8px;
+    height: 1px;
+    display: block;
+    position: relative;
+    background-color: white;
+    
+}
+#sidebar .toggle span::before{
+    top: -5px;
+}
+#sidebar .toggle span::after{
+    top: 4px;
+}
+
+#sidebar .toggle svg{
+    position: absolute;
+    fill: white;
+    background-color: #242424;
+    width: 18px;
+    height: 7px;
+    z-index: 999;
+    right: 6px;
+    transform: rotate(-90deg);
+
+}
+
+/* .active Style */
+#sidebar .toggle svg.active{
+    transform: rotate(90deg);
+}
+#sidebar .toggle span.active{
+    width: 8px;
+}
+#sidebar .toggle span.active::before, #sidebar .toggle span.active::after{
+    width: 15px;
+}
+
+#sidebar .toggle.active{
+    transform: none;
+}
+
+#sidebar .menu-list.active{
+    transform: none;
+}

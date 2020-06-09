@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Suranna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     </section>
 
     <section id="orders">
-        <h2>PIZZA</h2>
+        <h2 id="pizza">PIZZA</h2>
         <p class="discription">*$2 for every extra topping</p>
         <div class="container">
             <div class="food one">
@@ -193,6 +194,35 @@
         </div>
     </section>
 
+    <section id="sidebar">
+        <div class="sidebar-wrapper">
+            <div class="menu-list">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#"><span class="appataizer"></span>Appetizers</a></li>
+                    <li><a href="#">Soups</a></li>
+                    <li><a href="#">Salad</a></li>
+                    <li><a href="#pizza">Gourmet Pizza</a></li>
+                    <li><a href="#">Pasta Dishes</a></li>
+                    <li><a href="#">Baked Pasta</a></li>
+                    <li><a href="#">Dinners</a></li>
+                    <li><a href="#">Chicken Dinners</a></li>
+                    <li><a href="#">Specialties</a></li>
+                    <li><a href="#">Subs</a></li>
+                </ul>
+            </div>
+            <div class="toggle">
+                <span></span>
+                <svg id="arrow-down-mini" viewBox="-122.9 121.1 105.9 61.9">
+                    <path
+                        d="M-63.2 180.3l43.5-43.5c1.7-1.7 2.7-4 2.7-6.5s-1-4.8-2.7-6.5c-1.7-1.7-4-2.7-6.5-2.7s-4.8 1-6.5 2.7L-69.9 161l-37.2-37.2c-1.7-1.7-4-2.7-6.5-2.7s-4.8 1-6.5 2.6c-1.9 1.8-2.8 4.2-2.8 6.6 0 2.3.9 4.6 2.6 6.5 11.4 11.5 41 41.2 43 43.3l.2.2c3.6 3.6 10.3 3.6 13.9 0z">
+                    </path>
+                </svg>
+            </div>
+            
+        </div>
+    </section>
+
     <footer>
         <div class="info">
             <div class="loc">
@@ -233,7 +263,7 @@
             </ul>
         </div>
 
-        
+
 
         <div class="allRight">
             <h5>&copy; 2020 La Bella All Right Reserved.</h5>
