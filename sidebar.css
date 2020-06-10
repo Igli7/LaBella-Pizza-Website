@@ -16,9 +16,9 @@
     transition: transform 250ms ease-out;
 }
 #sidebar .menu-list h3{
-    font-size: 2.5em;
+    font-size: 2em;
     color: #BC4546;
-    padding: 1em 0;
+    padding: 0.5em 0;
 }
 #sidebar .menu-list ul{
     text-align: left;
@@ -26,10 +26,10 @@
     padding-left: 1.5em;
 }
 #sidebar .menu-list ul li{
-    padding: 1.2em 0;
+    padding: 4px 0;
 }
 #sidebar .menu-list ul:nth-last-child(1){
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 #sidebar .menu-list ul li a{
     color: white;
@@ -40,6 +40,52 @@
     transition: color 250ms ease-in;
     position: relative;
 }
+
+/* Rensponsive SideBar */
+@media(min-height:600px){
+    #sidebar .menu-list h3{
+        font-size: 2em;
+        padding: 0.5em 0;
+    }
+    #sidebar .menu-list ul li{
+        padding: 11px 0;
+    }
+    #sidebar .menu-list ul:nth-last-child(1){
+        padding-bottom: 2em;
+    }
+}
+@media(min-height:700px){
+    #sidebar .menu-list h3{
+        font-size: 2.2em;
+        padding: 0.8em 0;
+    }
+    #sidebar .menu-list ul li{
+        padding: 13px 0;
+    }
+    #sidebar .menu-list ul:nth-last-child(1){
+        padding-bottom: 3em;
+    }
+}
+
+
+@media(min-height:840px){
+    #sidebar .menu-list h3{
+        font-size: 2.5em;
+        padding: 1em 0;
+    }
+    #sidebar .menu-list ul li{
+        padding: 1.2em 0;
+    }
+    #sidebar .menu-list ul:nth-last-child(1){
+        padding-bottom: 4em;
+    }
+}
+
+
+
+
+
+
 /* Icons */
 #sidebar .menu-list ul li a span{
     width: 20px;
@@ -59,6 +105,73 @@
 #sidebar .menu-list ul li a:hover .appetizer{
     background-image: url(images/appetizerRed.png);
 }
+
+#sidebar .menu-list ul li .soup{
+    background-image: url(images/icons/soup.png);
+}
+#sidebar .menu-list ul li a:hover .soup{
+    background-image: url(images/icons/soupRed.png);
+}
+
+#sidebar .menu-list ul li .salad{
+    background-image: url(images/icons/salad.png);
+}
+#sidebar .menu-list ul li a:hover .salad{
+    background-image: url(images/icons/saladRed.png);
+}
+#sidebar .menu-list ul li .pizza{
+    background-image: url(images/icons/pizza.png);
+}
+#sidebar .menu-list ul li a:hover .pizza{
+    background-image: url(images/icons/pizzaRed.png);
+}
+#sidebar .menu-list ul li .pasta{
+    background-image: url(images/icons/pasta.png);
+}
+#sidebar .menu-list ul li a:hover .pasta{
+    background-image: url(images/icons/pastaRed.png);
+}
+
+#sidebar .menu-list ul li .baked{
+    background-image: url(images/icons/baked.png);
+    transform: rotate(90deg);
+}
+#sidebar .menu-list ul li a:hover .baked{
+    background-image: url(images/icons/bakedRed.png);
+}
+#sidebar .menu-list ul li .dinner{
+    background-image: url(images/icons/dinner.png);
+}
+#sidebar .menu-list ul li a:hover .dinner{
+    background-image: url(images/icons/dinnerRed.png);
+}
+
+#sidebar .menu-list ul li .chicken{
+    background-image: url(images/icons/chicken.png);
+}
+#sidebar .menu-list ul li a:hover .chicken{
+    background-image: url(images/icons/chickenRed.png);
+}
+
+#sidebar .menu-list ul li .speciality{
+    background-image: url(images/icons/speciality.png);
+}
+#sidebar .menu-list ul li a:hover .speciality{
+    background-image: url(images/icons/specialityRed.png);
+}
+
+#sidebar .menu-list ul li .sub{
+    background-image: url(images/icons/sub.png);
+}
+#sidebar .menu-list ul li a:hover .sub{
+    background-image: url(images/icons/subRed.png);
+}
+
+
+
+
+
+
 
 #sidebar .menu-list ul li a::before{
     content: '';
@@ -81,7 +194,7 @@
 
 
 
-
+/* Toggle */
 
 #sidebar .toggle{
     width: 34px;

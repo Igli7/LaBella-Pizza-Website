@@ -292,7 +292,7 @@ h2{
     position: relative;
     width: 50px;
     height: 34px;
-    background-image: url(images/Delivery.png);
+    background-image: url(images//icons/Delivery.png);
     background-size: cover;
     bottom: -.1em;
     left: 0em;
@@ -328,7 +328,7 @@ h2{
 }
 
 #hours .dine-in h3 span{
-    background-image: url(images/dine\ in.png);
+    background-image: url(images//icons/dine\ in.png);
     background-size: cover;
     background-position: center;
     height: 47px;
@@ -593,7 +593,7 @@ footer .number span{
 }
 
 footer .number:hover span{
-    background-image: url(images/phone1.png);
+    background-image: url(images//icons/phone1.png);
 }
 
 footer .social-media{

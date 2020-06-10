@@ -78,7 +78,7 @@ img{
 }
 
 
-img.one{
+.imgOne{
     grid-column-start: 3;
     grid-column-end: 4;
     /* width: 400px;
@@ -88,13 +88,17 @@ img.one{
     left: 4em;
     
 }
-img.two{
+.imgTwo{
     grid-column-start: 1;
     grid-column-end: 2;
     /* width:400px;
     height: 300px; */
     top: 900px;
     display: block;
+}
+img.pepper{
+    width: 500px;
+    left: 5%;
 }
 img.garlic{
     top: 1400px;
@@ -103,7 +107,7 @@ img.garlic{
 }
 
 @media(max-width:1230px){
-    img.two{
+    .imgTwo{
         display: none;
     }
 }
