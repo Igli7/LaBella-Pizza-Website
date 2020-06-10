@@ -6,6 +6,8 @@
 #sidebar .sidebar-wrapper{
     display: flex;
 }
+
+/* ================Menu List================= */
 #sidebar .menu-list{
     width: 200px;
     background-color: #242424;
@@ -38,10 +40,10 @@
     transition: color 250ms ease-in;
     position: relative;
 }
+/* Icons */
 #sidebar .menu-list ul li a span{
     width: 20px;
     height: 20px;
-    background-image: url(images/appetizer.png);
     background-size: cover;
     background-position: center;
     display: inline-block;
@@ -49,6 +51,13 @@
     left: -10px;
     top: 4px;  
     transition: background-image 250ms ease-in;  
+}
+
+#sidebar .menu-list ul li .appetizer{
+    background-image: url(images/appetizer.png);
+}
+#sidebar .menu-list ul li a:hover .appetizer{
+    background-image: url(images/appetizerRed.png);
 }
 
 #sidebar .menu-list ul li a::before{
@@ -61,6 +70,7 @@
     top: 50%;
     left: 15px;  
     transition: width 250ms ease-in-out;
+    border-radius: 20px;
 }
 #sidebar .menu-list ul li a:hover, #sidebar .menu-list ul li a:active{
     color: #BC4546;
@@ -68,9 +78,10 @@
 #sidebar .menu-list ul li a:hover::before{
     width: 95%;
 }
-#sidebar .menu-list ul li a:hover span{
-    background-image: url(images/appetizerRed.png);
-}
+
+
+
+
 
 #sidebar .toggle{
     width: 34px;

@@ -52,20 +52,20 @@ header h1 span{
 }
 .location span{
     position: absolute;
-    width: 25px;
-    height: 25px;
-    background-image: url(images/location.png);
+    width: 20px;
+    height: 20px;
+    background-image: url(images/icons/location.png);
     background-size: cover;
     background-position: center;
-    left: -1.6em;
-    top: -0.3em;
+    left: -1.4em;
+    top: -0.1em;
     transition: background-image 350ms;
 }
 .location:hover{
     color: #BC4546;
 }
 .location:hover span{
-    background-image: url(images/locationRed.png);
+    background-image: url(images/icons/locationRed.png);
 }
 
 @media (min-width: 700px) {
@@ -377,7 +377,7 @@ h2{
     height: 40px;
     z-index: 1500;
     border-radius: 50%;
-    background-image: url(images/phone.png);
+    background-image: url(images/icons/phoneGreen.png);
     background-size: cover;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
@@ -566,11 +566,11 @@ footer .location{
     top: 0;
     color: #35363A;
     font-weight: 900;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     display: inline-block;
 }
 footer .location span {
-    background-image: url(images/location1.png);
+    background-image: url(images/icons/locationBlack.png);
 
 }
 footer .phone-number{
@@ -585,7 +585,7 @@ footer .number{
     padding-bottom:0;
 }
 footer .number span{
-    background-image: url(images/phone1.png);
+    background-image: url(images/icons/phoneBlack.png);
     left: -4em;
     top: 0;
     width: 23px;
