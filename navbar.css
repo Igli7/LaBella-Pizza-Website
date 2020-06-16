@@ -69,8 +69,8 @@ nav .nav-list {
 
 nav .nav-list li {
     margin-bottom: 3em;
-    transform: translateY(800px);
-    transition: transform 450ms;
+    transform: translateY(450px);
+    transition: transform 300ms ease-out;
 }
 
 nav .nav-list.active li:nth-child(1) {
@@ -79,17 +79,17 @@ nav .nav-list.active li:nth-child(1) {
 
 nav .nav-list.active li:nth-child(2) {
     transform: translateY(0);
-    transition-delay: 250ms;
+    transition-delay: 150ms;
 }
 
 nav .nav-list.active li:nth-child(3) {
     transform: translateY(0);
-    transition-delay: 500ms;
+    transition-delay: 350ms;
 }
 
 nav .nav-list.active li:nth-child(4) {
     transform: translateY(0);
-    transition-delay: 750ms;
+    transition-delay: 500ms;
 }
 
 nav .nav-list li a {

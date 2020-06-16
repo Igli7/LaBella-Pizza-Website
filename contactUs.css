@@ -1,3 +1,81 @@
 header{
     background-image: url(images/desk.jpg);
 }
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+   
+}
+
+#form .contact-Form{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 0.5px solid rgba(53, 54, 58, 0.5);
+    padding: 0 2em;
+    border-radius: 10px;
+    padding-bottom: 1.5em;
+    box-shadow: 10px 10px 17px -10px rgba(20, 20, 20, 0.2);
+}
+#form .contact-Form h3{
+    padding: 0.8em 0;
+    color: #bc4546;
+    text-align: center;
+    display: block;
+    font-size: 1.3em;
+    width: 100%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+#form .contact-Form label{
+    display: none;
+}
+#form .contact-Form input, #form .contact-Form textarea{
+    height: 2.5em;
+    width: 20em;
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0,0.2);
+    padding-left: 1em;
+    margin: 0.7em 0;
+}
+#form .contact-Form textarea{
+    height: 7.5em;
+    width: 20em;
+    padding-top: 0.5em;
+}
+#form .contact-Form input:focus{
+    outline: none;
+}
+
+#form .contact-Form .btn{
+    position: relative;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(188, 69, 70, 0.8);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 10px 17px -10px rgba(20, 20, 20, 0.2);
+    transition: all 350ms ease-in;
+    width: 5em;
+    padding: 0.5em 3em;
+    
+}
+#form .contact-Form .btn:hover ,#form .contact-Form .btn:active{
+    background-color: #bc4546;
+    box-shadow: none;
+}
+
+@media(min-width: 740px){
+    #form .contact-Form input, #form .contact-Form textarea{
+        width: 25em;
+    }
+}
