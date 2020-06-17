@@ -43,7 +43,7 @@
         <div class="contact-Form">
             <div class="border">
                 <h3>We would love to hear from you!</h3>
-                <form action="">
+                <form action="" method="POST" data-netlify="true">
                     <div class="txt">
 
                         <input type="text" name="name" value="" placeholder="Full Name">
@@ -60,6 +60,10 @@
 
                         <textarea name="message" placeholder="Message..."></textarea>
                     </div>
+                    <div class="txt">
+                        <div data-netlify-recaptcha="true"></div>
+                    </div>
+                    
                     <button type="submit" class="btn">Submit</a>
                 </form>
             </div>
