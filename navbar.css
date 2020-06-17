@@ -57,11 +57,10 @@ nav .nav-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #35363A;
+    background-color: rgba(53, 54, 58, 0.9);
     position: fixed;
     list-style: none;
     text-decoration: none;
-    opacity: 0.8;
     visibility: hidden;
     transform: translateY(400px);
     transition: transform 350ms;

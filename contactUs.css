@@ -20,6 +20,7 @@ header{
     border-radius: 10px;
     padding-bottom: 1.5em;
     box-shadow: 10px 10px 17px -10px rgba(20, 20, 20, 0.2);
+    width: 95%;
 }
 #form .contact-Form h3{
     padding: 0.8em 0;
@@ -31,9 +32,6 @@ header{
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
-#form .contact-Form label{
-    display: none;
-}
 #form .contact-Form input, #form .contact-Form textarea{
     height: 2.5em;
     width: 100%;
@@ -44,7 +42,7 @@ header{
 }
 #form .contact-Form textarea{
     height: 7.5em;
-    width: 20em;
+    width: 100%;
     padding-top: 0.5em;
 }
 #form .contact-Form input:focus{
@@ -75,8 +73,66 @@ header{
     box-shadow: none;
 }
 
-@media(min-width: 740px){
-    #form .contact-Form input, #form .contact-Form textarea{
-        width: 100%;
+@media(min-width: 700px){
+    #form .contact-Form{
+        width: 600px;
     }
+    #form .contact-Form form{
+        width: 500px;
+    }
+    #form .contact-Form textarea{
+        max-height: 18em;
+        height: 13em;
+        max-width: 500px;
+    }
+    #form .contact-Form form .name{
+        padding-top: 1em;
+    }
+    #form .contact-Form h3{
+        font-size: 1.8em;
+    }
+}
+
+/* Map */
+
+#form .map {
+    display: none;
+}
+#form .map h3{
+    font-size: 2.5em;
+    padding: 1em 0;
+    color: #35363A;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: left;
+}
+
+@media(min-width: 840px){
+    #form{
+        display: flex;
+        flex-direction: column;
+    }
+    #form .map{
+        display: block;
+        padding-top: 3em;
+    }
+    
+}
+
+@media(min-width: 1300px){
+    #form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10em 0;
+    }
+    #form .map{
+        display: block;
+        padding-top: 0em;
+    }
+    #form .map h3{
+        padding-top: 0;
+        padding-bottom: 0.5em;
+    }
+    
 }
