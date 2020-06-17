@@ -3,6 +3,7 @@ header {
     background-image: url(images/pizza-ingredients.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 header::after{
@@ -17,10 +18,13 @@ header::after{
     z-index: 1;
 }
 
+
 header h1{
     font-weight: normal;
     font-family: 'Suranna', serif;
 }
+
+/* ========== ORDERS ======================= */
 
 #orders{  
     background-color: white;
@@ -28,13 +32,30 @@ header h1{
 #orders .container{
     z-index: 99;
 }
+#orders .curvedArrow{
+    padding-left: 2em;
+    padding-right: 0.5em;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+    display: block;
+    padding-top: 2em;
+}
+#orders .curvedArrow span{
+    display: inline-block;
+    background-image: url(images/leftCurved.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: relative;
+    left: -1em;
+}
 #orders h2{
     font-family: 'Suranna', serif;
     font-size: 3em;
     color: #BC4546;
     display: block;
     letter-spacing: 10px;
-    font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,11 +81,12 @@ header h1{
 #orders .discription{
     grid-column-start: 2;
     grid-column-end: 3;
-    font-size: 1.4em;
+    font-size: 1.3em;
     opacity: 0.8;
     padding-bottom: 2em;
     position: relative;
     z-index: 99;
+    font-weight: 100;
 }
 img{
     display: none;
@@ -74,6 +96,10 @@ img{
 @media(min-width:840px){
     img{
         display: block;
+    }
+    #orders .curvedArrow{
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 

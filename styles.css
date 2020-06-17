@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -14,6 +16,7 @@ body {
     text-align: center;
     position: relative;
     overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -27,31 +30,38 @@ header {
     flex-direction: column;
 }
 
-header h1{
+header h1 {
     color: white;
     position: relative;
     z-index: 20;
     display: block;
-    font-weight: bolder;
-    font-size: 4em;
-}
-header h1 span{
-    display: block;
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: 8px;
-    opacity: 0.8;
+    font-weight: 700;
+    font-size: 4.5em;
+    font-family: 'Itim', cursive;
 }
 
-.location{
+header h1 span {
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 8px;
+    opacity: 0.9;
+    font-family: 'Raleway', sans-serif;
+}
+
+.location {
     top: 4em;
     position: relative;
     z-index: 20;
     color: white;
     text-decoration: none;
     transition: color 350ms;
+    font-weight: 300;
+    font-size: 0.9em;
+    letter-spacing: 1px;
 }
-.location span{
+
+.location span {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -62,36 +72,38 @@ header h1 span{
     top: -0.1em;
     transition: background-image 350ms;
 }
-.location:hover{
+
+.location:hover {
     color: #BC4546;
 }
-.location:hover span{
+
+.location:hover span {
     background-image: url(images/icons/locationRed.png);
 }
 
 @media (min-width: 700px) {
-    header h1{
+    header h1 {
         font-size: 5em;
     }
-    header h1 span{
+    header h1 span {
         font-size: 2rem;
     }
-    header .location{
+    header .location {
         font-size: 1.05rem;
     }
 }
+
 @media (min-width: 840px) {
-    header h1{
+    header h1 {
         font-size: 5.5em;
     }
-    header h1 span{
+    header h1 span {
         font-size: 2.5rem;
     }
-    header .location{
+    header .location {
         font-size: 1.1rem;
     }
 }
-
 
 header .slide {
     background-position: center;
@@ -102,18 +114,16 @@ header .slide {
     width: 100vw;
     height: 100vh;
     display: none;
-    animation: scale 1s  ease-in;
+    animation: scale 1s ease-in;
     z-index: 2;
-
 }
 
-
-@keyframes scale{
-    0%{
+@keyframes scale {
+    0% {
         transform: scale(1.1);
         opacity: 0.8;
     }
-    100%{
+    100% {
         transform: none;
         opacity: 1;
     }
@@ -194,52 +204,44 @@ header .slide.five {
     right: 0;
 }
 
-@media(min-width: 700px){
+@media(min-width: 700px) {
     /* Controls */
-    .controls .prev, .controls .next{
+    .controls .prev, .controls .next {
         display: flex;
     }
-    
-    .controls .back{
+    .controls .back {
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: 2;
     }
-    
-    .controls .back:hover{
+    .controls .back:hover {
         background-color: white;
         opacity: 0.2;
-        
     }
-    
     .prev .img, .next .img {
         width: 22px;
         height: 42px;
     }
-    .prev{
+    .prev {
         left: -200px;
         transition: all 250ms ease-out;
     }
-    .next{
+    .next {
         right: -200px;
         transition: all 250ms ease-out;
     }
-
-    header:hover .controls .prev{
+    header:hover .controls .prev {
         left: 0px;
     }
-
-    header:hover .controls .next{
+    header:hover .controls .next {
         right: 0px;
     }
-
-
 }
 
-
 /* Indicators */
-.indicator{
+
+.indicator {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -247,7 +249,8 @@ header .slide.five {
     transform: translateX(-50%);
     cursor: pointer;
 }
-.indicator div{
+
+.indicator div {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -255,31 +258,30 @@ header .slide.five {
     border-radius: 50%;
     margin: 0 4.5px;
     border: 2px solid rgba(77, 77, 77, 0.8);
-
-
 }
-.indicator div.active{
+
+.indicator div.active {
     background-color: rgba(77, 77, 77, 0.5);
     border: 2px solid rgba(190, 189, 189, 0.4);
 }
 
-
 /* ============== HOURS ===================== */
 
-
-
-#hours{
+#hours {
     display: flex;
     flex-direction: column;
     background-color: rgba(175, 160, 147, 0.3);
 }
-h2{
-    color: black;
-    font-size: 47px;
+
+h2 {
+    color: #35363A;
+    font-size: 50px;
     padding-top: 1.8em;
-    font-weight: bolder;
+    font-weight: 900;
+    
 }
-#hours h3{
+
+#hours h3 {
     font-family: 'Courier New', Courier, monospace;
     margin-top: 2em;
     font-size: 28px;
@@ -287,9 +289,9 @@ h2{
     letter-spacing: 4px;
     position: relative;
     left: -0.7em;
-    
 }
-#hours h3 span{
+
+#hours h3 span {
     position: relative;
     width: 50px;
     height: 34px;
@@ -300,20 +302,20 @@ h2{
     display: inline-block;
 }
 
-#hours .wrapper{
+#hours .wrapper {
     margin-top: 5em;
 }
 
-#hours h4{
+#hours h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 23px;
     display: block;
     margin-top: 3em;
     font-weight: bold;
     letter-spacing: 2px;
-    
 }
-#hours h4 span{
+
+#hours h4 span {
     margin-top: 1.3em;
     font-family: 'Courier New', Courier, monospace;
     display: block;
@@ -323,12 +325,12 @@ h2{
     letter-spacing: 4px;
 }
 
-#hours .dine-in{
+#hours .dine-in {
     margin-top: 5.5em;
     padding-bottom: 10em;
 }
 
-#hours .dine-in h3 span{
+#hours .dine-in h3 span {
     background-image: url(images//icons/dine\ in.png);
     background-size: cover;
     background-position: center;
@@ -336,33 +338,29 @@ h2{
     top: 0.3em;
 }
 
-@media(min-width: 700px){
-    h2{
+@media(min-width: 700px) {
+    h2 {
         font-size: 3.6em;
         padding-top: 2.5em;
     }
-
-    #hours h3{
+    #hours h3 {
         font-size: 33px;
         margin-top: 4em;
     }
 }
-@media(min-width: 840px){
 
-    #hours .wrapper{
+@media(min-width: 840px) {
+    #hours .wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-
     }
-    #hours .dine-in{
+    #hours .dine-in {
         margin-top: 0;
         position: relative;
         top: -0.76em;
     }
-
-
-    #hours h2{
+    #hours h2 {
         font-size: 4em;
         padding-top: 2.8em;
     }
@@ -370,7 +368,7 @@ h2{
 
 /* ==================Phone======================== */
 
-#phone a{
+#phone a {
     position: fixed;
     bottom: 3em;
     right: 1.5em;
@@ -383,26 +381,29 @@ h2{
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media(min-width: 700px){
-    #phone a{
+@media(min-width: 700px) {
+    #phone a {
         right: 2.5em;
     }
 }
-@media(min-width: 840px){
-    #phone a{
+
+@media(min-width: 840px) {
+    #phone a {
         right: 3.5em;
     }
 }
 
-
 /* ======================= Frequently Ordered================ */
-#orders{
+
+#orders {
     background-color: #f3f3f3;
 }
-#orders h2{
+
+#orders h2 {
     padding-bottom: 2em;
 }
-#orders .food{
+
+#orders .food {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -415,7 +416,7 @@ h2{
     max-width: 360px;
 }
 
-#orders .food .photo{
+#orders .food .photo {
     max-width: 80px;
     min-width: 80px;
     width: 80px;
@@ -425,13 +426,13 @@ h2{
     border-radius: 20%;
 }
 
-#orders .text{
+#orders .text {
     border-right: 0.5px solid rgba(0, 0, 0, 0.274);
     max-width: 200px;
 }
 
-#orders h3{
-    font-family: Ebrima; 
+#orders h3 {
+    font-family: Ebrima;
     display: block;
     color: #370C0C;
     font-weight: bold;
@@ -439,16 +440,16 @@ h2{
     letter-spacing: 2px;
     text-align: left;
     padding-left: 0.5em;
-
 }
-#orders h3 span{
+
+#orders h3 span {
     display: block;
     font-size: 10.5px;
     opacity: 0.5;
     padding-top: 0.3em;
 }
 
-#orders .price{
+#orders .price {
     font-family: ink free;
     position: relative;
     margin-top: auto;
@@ -458,15 +459,15 @@ h2{
     max-width: 100px;
 }
 
-#orders .food .marsala{
+#orders .food .marsala {
     background-image: url(images/Chicken-Marsala.jpg);
 }
 
-#orders .food .cheese{
+#orders .food .cheese {
     background-image: url(images/pepperoni.jpg);
 }
 
-#orders .pizza .price p{
+#orders .pizza .price p {
     font-family: Ebrima;
     font-weight: bolder;
     font-size: 15px;
@@ -475,36 +476,35 @@ h2{
     padding-top: 0.25em;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.274);
     min-width: 94.5px;
-
 }
-#orders .pizza .price p .size{
+
+#orders .pizza .price p .size {
     font-size: 10.5px;
     font-weight: 400;
 }
-#orders .pizza .price p .pr{
+
+#orders .pizza .price p .pr {
     font-family: ink free;
     padding-left: 0.2em;
-
 }
 
-#orders .pizza .text{
+#orders .pizza .text {
     max-width: 165px;
 }
 
-
-@media(min-width: 840px){
-    #orders{
+@media(min-width: 840px) {
+    #orders {
         display: grid;
         grid-template-columns: 1fr 820px 1fr;
         position: relative;
     }
-    #orders h2{
+    #orders h2 {
         grid-column-start: 2;
         grid-column-end: 3;
         padding-top: 4em;
         padding-bottom: 4.5em;
     }
-    #orders .container{
+    #orders .container {
         grid-column-start: 2;
         grid-column-end: 3;
         display: grid;
@@ -514,78 +514,78 @@ h2{
         justify-content: space-evenly;
         padding-bottom: 7em;
     }
-    #orders .container::before{
-      content: '';
-      position: absolute;
-      height: 80%;
-      top: -1.5em;
-      width: 0.08px;
-      opacity: 0.6;
-      background-color: black;
-      left: 50%;
-      transform: translateX(-50%);
+    #orders .container::before {
+        content: '';
+        position: absolute;
+        height: 80%;
+        top: -1.5em;
+        width: 0.08px;
+        opacity: 0.6;
+        background-color: black;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    #orders .food{
+    #orders .food {
         left: auto;
         transform: none;
         max-width: none;
     }
-
-    #orders .pizza{
+    #orders .pizza {
         position: relative;
         right: 0;
     }
-
-    #orders .two{
+    #orders .two {
         padding-left: 4em;
     }
-    #orders .one{
+    #orders .one {
         padding-right: 4em;
     }
-   
 }
 
 /* ============= FOOTER =================== */
-footer{
-    background-color: rgba(175, 160, 147, 0.55);;
+
+footer {
+    background-color: rgba(175, 160, 147, 0.55);
+    ;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-footer .info{
+footer .info {
     padding-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
-footer .location{
+footer .location {
     top: 0;
     color: #35363A;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 2em;
     display: inline-block;
+   
 }
+
 footer .location span {
     background-image: url(images/icons/locationBlack.png);
-
 }
-footer .phone-number{
+
+footer .phone-number {
     margin-top: 2em;
-
 }
 
-footer .number{
+footer .number {
     display: block;
     font-size: 1.4em;
     margin-bottom: 1.5rem;
-    padding-bottom:0;
+    padding-bottom: 0;
 }
-footer .number span{
+
+footer .number span {
     background-image: url(images/icons/phoneBlack.png);
     left: -4em;
     top: 0;
@@ -593,120 +593,121 @@ footer .number span{
     height: 23px;
 }
 
-footer .number:hover span{
+footer .number:hover span {
     background-image: url(images//icons/phone1.png);
 }
 
-footer .social-media{
+footer .social-media {
     padding-top: 2em;
 }
 
-footer .social-media ul{
+footer .social-media ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .social-media ul li{
+footer .social-media ul li {
     list-style: none;
     margin: 0 1em;
-    
 }
 
-footer .social-media ul li a{
+footer .social-media ul li a {
     font-size: 2em;
     color: #35363A;
-
 }
 
-footer .fa{
+footer .fa {
     transition: color 400ms;
 }
 
-
-footer .social-media ul li:hover:nth-child(1) .fa{
+footer .social-media ul li:hover:nth-child(1) .fa {
     color: #3b5998;
 }
-footer .social-media ul li:hover:nth-child(2) .fa{
+
+footer .social-media ul li:hover:nth-child(2) .fa {
     color: #e4405f;
 }
-footer .social-media ul li:hover:nth-child(3) .fa{
+
+footer .social-media ul li:hover:nth-child(3) .fa {
     color: #00acee;
 }
-footer .social-media ul li:hover:nth-child(4) .fa{
-    color: #d44638 ;
+
+footer .social-media ul li:hover:nth-child(4) .fa {
+    color: #d44638;
 }
 
-.fa:hover footer .social-media ul li:hover:nth-child(1){
+.fa:hover footer .social-media ul li:hover:nth-child(1) {
     color: #3b5998;
 }
 
-
-
-footer .allRight{
+footer .allRight {
     padding: 3em 0;
     margin-right: 1em;
 }
-footer h5{
+
+footer h5 {
     font-size: 1em;
-    font-weight: 900;
+    font-weight: 700;
     padding-bottom: 0.5em;
+    letter-spacing: 1px;
 }
-footer p{
+
+footer p {
     font-size: 0.9em;
-    font-weight: bolder;
+    font-weight: 600;
+    opacity: 0.8;
 }
-footer p a{
+
+footer p a {
     color: #00ADBA;
     position: relative;
     transition: color 400ms;
 }
-footer p a::after{
+
+footer p a::after {
     font-family: 'FontAwesome';
     content: " \f08e";
     font-size: 0.7em;
     position: absolute;
     top: -0.7em;
     right: -1em;
-    display: none;
-    transition: all 550ms;
+    visibility: hidden;
+    transition: visibility 150ms;
 }
 
-footer p a:hover{
+footer p a:hover {
     cursor: pointer;
-    color:#35363A;
+    color: #35363A;
 }
-footer p a:hover:after{
-    display: inline-block;
+
+footer p a:hover:after {
+    visibility: visible;
     color: #00ADBA;
 }
 
-@media(min-width: 700px){
-    footer{
+@media(min-width: 700px) {
+    footer {
         font-size: 1.15em;
     }
 }
 
-@media(min-width: 840px){
-    footer{
+@media(min-width: 840px) {
+    footer {
         font-size: 1.2em;
     }
-    footer .info{
+    footer .info {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
         padding-bottom: 3em;
     }
-    footer .number span{
+    footer .number span {
         left: -1.3em;
     }
-    footer .social-media{
+    footer .social-media {
         padding-bottom: 3em;
     }
-    
 }
-
-
-
